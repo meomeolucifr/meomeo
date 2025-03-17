@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    
+    <!-- Embed Atkinson Hyperlegible Mono Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            font-family: "Atkinson Hyperlegible Mono", sans-serif; /* Use provided font */
+            background-color: #000; /* Dark theme */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full screen height */
+        }
+
+        /* Home link styling */
+        .home-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: grey; /* Grey text */
+            text-decoration: none; /* Remove underline */
+            font-size: 16px; /* Adjust font size */
+        }
+
+        .home-link:hover {
+            color: white; /* Turns white on hover */
+        }
+
+        /* Login form container */
+        .login-container {
+            background-color: #111; /* Slightly lighter black */
+            padding: 20px 30px;
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            outline: 2px solid white; /* Adds a white outline */
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .login-container input {
+            width: calc(100% - 20px); /* Ensure inputs are centered with padding */
+            padding: 10px;
+            margin-bottom: 15px; /* Adds vertical spacing */
+            border-radius: 5px; /* Rounded corners */
+            border: none; /* Removes default borders */
+            outline: none; /* Removes default outline */
+            background-color: #000; /* Black background */
+            color: white; /* White text */
+            font-family: "Atkinson Hyperlegible Mono", sans-serif; /* Apply provided font */
+        }
+
+        .login-container input:focus {
+            outline: 2px solid #c7c7c7; /* Blue outline on focus */
+        }
+
+        .login-container .login-button {
+            background-color: #000; /* Black background */
+            color: white; /* White text */
+            font-family: "Atkinson Hyperlegible Mono", sans-serif; /* Apply provided font */
+            font-weight: bold;
+            cursor: pointer;
+            display: block; /* Block-level element */
+            margin: 20px auto; /* Centers the button horizontally with spacing */
+            padding: 12px 25px; /* Adjusts padding for better size */
+            border-radius: 15px; /* Rounded corners */
+            border: 2px solid white; /* Thin white outline */
+            transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+        }
+
+        .login-container .login-button:hover {
+            background-color: white; /* White background on hover */
+            color: black; /* Black text on hover */
+        }
+
+        .login-container a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color:white 
+        }
+
+.signup-text {
+    text-align: center;
+    margin-top: 15px;
+    color: grey;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.signup-text a {
+    color: white;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <!-- Home Link -->
+    <a href="index.html" class="home-link">&lt; Home</a>
+
+    <!-- Login Form -->
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="#">
+            <label for="username">Username</label>
+            <input type="username" id="username" placeholder="Enter your username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <button type="submit" class="login-button">Log In</button>
+        </form>
+        <a href="#">Forgot Password?</a>
+        <p class="signup-text">New here? <a href="signup.html">Sign up</a></p>
+    </div>
+</body>
+</html>

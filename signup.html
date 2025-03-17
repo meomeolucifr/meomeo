@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    
+    <!-- Embed Atkinson Hyperlegible Mono Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            font-family: "Atkinson Hyperlegible Mono", sans-serif; /* Use provided font */
+            background-color: #000; /* Dark theme */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full screen height */
+        }
+
+        /* Home link styling */
+        .home-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: grey; /* Grey text */
+            text-decoration: none; /* Remove underline */
+            font-size: 16px; /* Adjust font size */
+        }
+
+        .home-link:hover {
+            color: white; /* Turns white on hover */
+        }
+
+        /* Sign Up form container */
+        .signup-container {
+            background-color: #111; /* Slightly lighter black */
+            padding: 20px 30px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            outline: 2px solid white; /* Adds a white outline */
+        }
+
+        .signup-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .signup-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .signup-container input {
+            width: calc(100% - 20px); /* Ensure inputs are centered with padding */
+            padding: 10px;
+            margin-bottom: 15px; /* Adds vertical spacing */
+            border-radius: 5px; /* Rounded corners */
+            border: 2px solid transparent; /* No visible border by default */
+            background-color: #000; /* Black background */
+            color: white; /* White text */
+            outline: none; /* Removes default outline */
+            display: block; /* Ensures inputs are block-level elements */
+            font-family: "Atkinson Hyperlegible Mono", sans-serif; /* Use provided font */
+        }
+
+        .signup-container input::placeholder {
+            color: grey; /* Grey placeholder text for better visibility */
+        }
+
+        .signup-container input:focus {
+            border-color: #ffffff; /* White border on focus */
+        }
+
+        .signup-container .signup-button {
+            background-color: #000; /* Black background */
+            color: white; /* White text */
+            font-family: "Atkinson Hyperlegible Mono", sans-serif; /* Apply provided font */
+            font-weight: bold;
+            cursor: pointer;
+            display: block; /* Block-level element */
+            margin: 20px auto; /* Centers the button horizontally with spacing */
+            padding: 12px 25px; /* Adjusts padding for better size */
+            border-radius: 15px; /* Rounded corners */
+            border: 2px solid white; /* Thin white outline */
+            transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+        }
+
+        .signup-container .signup-button:hover {
+            background-color: white; /* White background on hover */
+            color: black; /* Black text on hover */
+        }
+        .login-text {
+            text-align: center; /* Centers the text */
+            margin-top: 15px; /* Adds spacing above the text */
+            color: grey; /* Makes the text grey */
+            font-size: 14px; /* Adjust font size if needed */
+        }
+
+        .login-text a {
+            color: white; /* White link for "Sign up" */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .login-text a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Home Button -->
+    <a href="index.html" class="home-link">&lt; Home</a>
+
+    <!-- Sign Up Form -->
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form action="#">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+
+            <!-- Sign Up Button -->
+            <button type="submit" class="signup-button">SIGN UP</button>
+        </form>
+        <p class="login-text">Had an account? <a href="login.html">Log in</a></p>
+    </div>
+</body>
+</html>
