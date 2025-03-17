@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nigga</title>
+    <title>Home</title>
     
-    <!-- Embed Atkinson Hyperlegible Mono Font -->
+    <!-- Embed Atkinson Hyperlegible Mono and Big Shoulders Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,300;1,300&family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap" rel="stylesheet">
+
     <style>
         /* General body styling */
         body {
@@ -136,6 +136,75 @@
 
 
 
+        .image-container {
+          transition: opacity 0.5s ease-out, filter 0.5s ease-out;
+          display: flex;
+          justify-content: left; /* Centers horizontally */
+          align-items: center; /* Centers vertically */
+          height: 80vh; /* Full viewport height */
+        }
+
+        .image-container.fade-out {
+          opacity: 0;
+          filter: blur(30px);
+        }
+
+        .rounded-image {
+            border-radius: 25px;
+          transition: opacity 0.2s ease-out, filter 0.2s ease-out;
+            width: 600px; /* Increase from 400px to 600px or your desired size */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .fade-element {
+          opacity: 0; /* Bắt đầu với opacity = 0 */
+          transform: translateY(00px); /* Dịch xuống một chút */
+          transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Hiệu ứng chuyển đổi */
+        }
+
+        .fade-element.visible {
+          opacity: 1; /* Hiện hình ảnh */
+          transform: translateY(0); /* Đưa về vị trí ban đầu */
+        }
+
+        .rounded-image {
+          border-radius: 25px; /* Làm góc ảnh bo tròn */
+          width: 800px; /* Kích thước lớn hơn */
+          height: auto; /* Giữ tỷ lệ ảnh */
+        }
+        .content-container {
+          margin-top: 150px;
+          position: relative;
+        }
+
+        .image-text-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .spacer {
+          height: 100px; /* Điều chỉnh khoảng cách này để đặt text thấp hơn */
+        }
+
+        .description {
+          font-size: 2em;
+        }
+        .dhs {
+            font-size: 5em;
+        }
+
+        .text1 {
+          margin-right: 100px; /* Tạo khoảng cách bên phải */
+        }
+
+        .text2 {
+          margin-left: 50px; /* Tạo khoảng cách bên trái */
+        }
+
+        .imageal {
+            margin-left: 30px;
+        }
+
     </style>
 </head>
 <body>
@@ -162,8 +231,62 @@
 
     <!-- Placeholder content to enable scrolling -->
     <div style="margin-top: 150px;">
-        <p style="text-align:center;">chip beo</p>
+<div class="content-container">
+  <div class="image-text-wrapper">
+    <div class="image-container fade-element imageal">
+      <img src="C:\Users\ThienNhan\Desktop\Web\mel1.jpg" alt="cn mel" class="rounded-image">
+    </div>
+    <h1 class="dm-hcmut fade-element text1 dhs">BÁCH KHOA BÉO</h1>
+  </div>
+  <div class="spacer"></div>
+  <p class="description fade-element text2">chip chip chip chip chip chip chip chip chip </p>
+</div>
+
+
+    
         <div style="height: 2000px;"></div> <!-- Filler content -->
     </div>
+    <script>
+function handleScroll() {
+  const fadeElements = document.querySelectorAll('.fade-element');
+  const scrollPosition = window.pageYOffset;
+  const windowHeight = window.innerHeight;
+
+  fadeElements.forEach(element => {
+    const elementPosition = element.offsetTop;
+    const elementHeight = element.offsetHeight;
+
+    if (scrollPosition > elementPosition + elementHeight - windowHeight / 4 ||
+        scrollPosition + windowHeight < elementPosition + windowHeight / 4) {
+      element.classList.add('fade-out');
+    } else {
+      element.classList.remove('fade-out');
+    }
+  });
+}
+
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('load', handleScroll);
+
+</script>
+<script>
+function handleScroll() {
+    const fadeElements = document.querySelectorAll('.fade-element');
+    fadeElements.forEach(element => {
+        const rect = element.getBoundingClientRect();
+        const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+        if (isVisible) {
+            element.classList.add('visible'); // Fade-in khi vào viewport
+        } else {
+            element.classList.remove('visible'); // Fade-out khi ra khỏi viewport
+        }
+    });
+}
+
+// Gắn sự kiện scroll và load để kiểm tra
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('load', handleScroll);
+</script>
+
 </body>
 </html>
