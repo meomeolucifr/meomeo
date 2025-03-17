@@ -63,15 +63,20 @@
             padding: 10px;
             margin-bottom: 15px; /* Adds vertical spacing */
             border-radius: 5px; /* Rounded corners */
-            border: none; /* Removes default borders */
-            outline: none; /* Removes default outline */
+            border: 2px solid transparent; /* No visible border by default */
             background-color: #000; /* Black background */
             color: white; /* White text */
-            font-family: "Atkinson Hyperlegible Mono", sans-serif; /* Apply provided font */
+            outline: none; /* Removes default outline */
+            display: block; /* Ensures inputs are block-level elements */
+            font-family: "Atkinson Hyperlegible Mono", sans-serif; /* Use provided font */
+        }
+
+        .login-container input::placeholder {
+            color: grey; /* Grey placeholder text for better visibility */
         }
 
         .login-container input:focus {
-            outline: 2px solid #c7c7c7; /* Blue outline on focus */
+            border-color: #ffffff; /* White border on focus */
         }
 
         .login-container .login-button {
@@ -92,52 +97,40 @@
             background-color: white; /* White background on hover */
             color: black; /* Black text on hover */
         }
-
-        .login-container a {
-            display: block;
-            text-align: center;
-            margin-top: 10px;
-            color:white 
+        .signup-text {
+            text-align: center; /* Centers the text */
+            margin-top: 15px; /* Adds spacing above the text */
+            color: grey; /* Makes the text grey */
+            font-size: 14px; /* Adjust font size if needed */
         }
 
-.signup-text {
-    text-align: center;
-    margin-top: 15px;
-    color: grey;
-    font-size: 14px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%;
-}
+        .signup-text a {
+            color: white; /* White link for "Sign up" */
+            text-decoration: none; /* Remove underline */
+        }
 
-.signup-text a {
-    color: white;
-    text-decoration: none;
-}
-
-.signup-text a:hover {
-    text-decoration: underline;
-}
+        .signup-text a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
     </style>
 </head>
 <body>
-    <!-- Home Link -->
+    <!-- Home Button -->
     <a href="index.html" class="home-link">&lt; Home</a>
 
-    <!-- Login Form -->
+    <!-- Sign Up Form -->
     <div class="login-container">
         <h2>Login</h2>
         <form action="#">
             <label for="username">Username</label>
-            <input type="username" id="username" placeholder="Enter your username" required>
+            <input type="text" id="username" placeholder="Enter your username" required>
 
             <label for="password">Password</label>
             <input type="password" id="password" placeholder="Enter your password" required>
 
-            <button type="submit" class="login-button">Log In</button>
+            <!-- LOG IN Button -->
+            <button type="submit" class="login-button">LOG IN</button>
         </form>
-        <a href="#">Forgot Password?</a>
         <p class="signup-text">New here? <a href="signup.html">Sign up</a></p>
     </div>
 </body>
