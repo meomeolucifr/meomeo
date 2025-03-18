@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nigga</title>
-    
-    <!-- Embed Atkinson Hyperlegible Mono Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  
+  <link rel="preload" href="path-to-your-font.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <!-- Embed Atkinson Hyperlegible Mono and Big Shoulders Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,300;1,300&family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap" rel="stylesheet">
     <style>
         /* General body styling */
         body {
@@ -58,33 +59,29 @@
         }
 
         /* Default styling for all links */
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            gap: 30px;
+        }
+
         .nav-links a {
             text-decoration: none;
-            color: white;
-            font-family: "Atkinson Hyperlegible Mono", sans-serif; /* Apply custom font */
-            font-weight: 600; /* Makes the text bold */
-            font-size: 18px; /* Default size for categories */
-            transition: all 0.3s ease; /* Smooth transition for hover effects */
+            color: grey;
+            font-family: "Atkinson Hyperlegible Mono", sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            transition: color 0.1s ease;
         }
 
-        /* Highlight current page (HOME button) */
         .nav-links a.active {
-            background-color: #000; /* Black background */
-            color: white; /* White text */
-            padding: 5px 10px; /* Adds padding inside the box */
-            border-radius: 10px; /* Rounded corners */
-            border: 2px solid white; /* Thin white outline */
+            color: white;
         }
 
-        /* Hover effect on other categories except HOME */
-        .nav-links a:not(.active):hover {
-            font-size: 20px; /* Slightly enlarge the hovered category */
-        }
-
-        /* Effect on non-hovered links except HOME */
-        .nav-links a:not(.active):not(:hover) {
-            color: grey; /* Turn non-hovered categories grey */
-            font-size: 16px; /* Shrink non-hovered categories */
+        .nav-links a:hover {
+            color: white;
         }
 
 
@@ -125,14 +122,7 @@
         }
         /* Highlight current page */
         /* Highlight current page */
-        .nav-links a.active {
-            background-color: #000; /* Black background */
-            color: white; /* White text */
-            padding: 8px 15px; /* Adds padding inside the box */
-            border-radius: 10px; /* Rounded corners */
-            border: 2px solid white; /* Thin white outline */
-            text-align: center; /* Centers text inside the box */
-        }
+
 
 
 

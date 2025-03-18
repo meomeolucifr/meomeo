@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    
-    <!-- Embed Atkinson Hyperlegible Mono and Big Shoulders Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,300;1,300&family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  
+  <link rel="preload" href="path-to-your-font.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <!-- Embed Atkinson Hyperlegible Mono and Big Shoulders Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,300;1,300&family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap" rel="stylesheet">
     <style>
         /* General body styling */
         body {
@@ -29,7 +30,7 @@
             background-color: #000; /* Black background */
             border-radius: 15px; /* Rounded corners */
             outline: 2px solid white; /* Thin white outline */
-
+            overflow: hidden;
             position: fixed; /* Keeps the box fixed at the top */
             top: 20px; /* Space between the box and the top edge */
             left: 5%; /* Space from the left edge */
@@ -37,54 +38,32 @@
             z-index: 1000; /* Ensures it stays above other elements */
         }
 
-        /* Navigation links styling */
-        /* Navigation links container */
-        .nav-links {
-            display: flex;
-            justify-content: center; /* Center all links horizontally */
-            align-items: center; /* Vertically center links within the box */
-            flex-grow: 1; /* Makes nav-links take up available space */
-            gap: 30px; /* Space between links */
-        }
 
         /* Default styling for links */
         /* Navigation links container */
         .nav-links {
             display: flex;
-            justify-content: center; /* Center all links horizontally */
-            align-items: center; /* Vertically center links within the box */
-            flex-grow: 1; /* Makes nav-links take up available space */
-            gap: 30px; /* Space between links */
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            gap: 30px;
         }
 
-        /* Default styling for all links */
         .nav-links a {
             text-decoration: none;
-            color: white;
-            font-family: "Atkinson Hyperlegible Mono", sans-serif; /* Apply custom font */
-            font-weight: 600; /* Makes the text bold */
-            font-size: 18px; /* Default size for categories */
-            transition: all 0.3s ease; /* Smooth transition for hover effects */
+            color: grey;
+            font-family: "Atkinson Hyperlegible Mono", sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            transition: color 0.1s ease;
         }
 
-        /* Highlight current page (HOME button) */
         .nav-links a.active {
-            background-color: #000; /* Black background */
-            color: white; /* White text */
-            padding: 5px 10px; /* Adds padding inside the box */
-            border-radius: 10px; /* Rounded corners */
-            border: 2px solid white; /* Thin white outline */
+            color: white;
         }
 
-        /* Hover effect on other categories except HOME */
-        .nav-links a:not(.active):hover {
-            font-size: 20px; /* Slightly enlarge the hovered category */
-        }
-
-        /* Effect on non-hovered links except HOME */
-        .nav-links a:not(.active):not(:hover) {
-            color: grey; /* Turn non-hovered categories grey */
-            font-size: 16px; /* Shrink non-hovered categories */
+        .nav-links a:hover {
+            color: white;
         }
 
 
@@ -125,14 +104,7 @@
         }
         /* Highlight current page */
         /* Highlight current page */
-        .nav-links a.active {
-            background-color: #000; /* Black background */
-            color: white; /* White text */
-            padding: 8px 15px; /* Adds padding inside the box */
-            border-radius: 10px; /* Rounded corners */
-            border: 2px solid white; /* Thin white outline */
-            text-align: center; /* Centers text inside the box */
-        }
+
 
 
 
@@ -156,14 +128,18 @@
             height: auto; /* Maintain aspect ratio */
         }
         .fade-element {
-          opacity: 0; /* Bắt đầu với opacity = 0 */
-          transform: translateY(00px); /* Dịch xuống một chút */
-          transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Hiệu ứng chuyển đổi */
+          opacity: 0;
+          transition: opacity 0.5s ease-out, transform 0.5s ease-out;
         }
 
         .fade-element.visible {
-          opacity: 1; /* Hiện hình ảnh */
-          transform: translateY(0); /* Đưa về vị trí ban đầu */
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .fade-element.fade-out {
+          opacity: 0;
+          transform: translateY(20px);
         }
 
         .rounded-image {
@@ -205,20 +181,27 @@
             margin-left: 30px;
         }
 
+
+        .dm-hcmut {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 5em;
+  margin-left: auto; /* Aligns the text to the right */
+}
+
     </style>
 </head>
 <body>
     <!-- Top rectangular box -->
     <div class="top-box">
         <!-- Navigation links -->
-<div class="nav-links">
-    <a href="#" class="active" onclick="window.location.href='index.html'">HOME</a>
-    <a href="#" onclick="window.location.href='property.html'">PROPERTY</a>
-    <a href="#" onclick="window.location.href='chip.html'">CHIP</a>
-    <a href="#" onclick="window.location.href='blog.html'">BLOG</a>
-    <a href="#" onclick="window.location.href='forum.html'">FORUM</a>
-    <a href="#" onclick="window.location.href='meomeo.html'">MEOMEO</a>
-</div>
+    <div class="nav-links">
+        <a href="#" class="active" onclick="window.location.href='index.html'">HOME</a>
+        <a href="#" onclick="window.location.href='property.html'">PROPERTY</a>
+        <a href="#" onclick="window.location.href='chip.html'">CHIP</a>
+        <a href="#" onclick="window.location.href='blog.html'">BLOG</a>
+        <a href="#" onclick="window.location.href='forum.html'">FORUM</a>
+        <a href="#" onclick="window.location.href='meomeo.html'">MEOMEO</a>
+    </div>
 
 
 
@@ -236,39 +219,18 @@
     <div class="image-container fade-element imageal">
       <img src="C:\Users\ThienNhan\Desktop\Web\mel1.jpg" alt="cn mel" class="rounded-image">
     </div>
-    <h1 class="dm-hcmut fade-element text1 dhs">BÁCH KHOA BÉO</h1>
+    <h1 class="dm-hcmut fade-element text1 dhs">DM HCMUT</h1>
+  </div>
   </div>
   <div class="spacer"></div>
-  <p class="description fade-element text2">chip chip chip chip chip chip chip chip chip </p>
+    <p class="description fade-element text text2">chip chip chip chip chip chip chip chip chip</p>
 </div>
 
 
     
         <div style="height: 2000px;"></div> <!-- Filler content -->
     </div>
-    <script>
-function handleScroll() {
-  const fadeElements = document.querySelectorAll('.fade-element');
-  const scrollPosition = window.pageYOffset;
-  const windowHeight = window.innerHeight;
 
-  fadeElements.forEach(element => {
-    const elementPosition = element.offsetTop;
-    const elementHeight = element.offsetHeight;
-
-    if (scrollPosition > elementPosition + elementHeight - windowHeight / 4 ||
-        scrollPosition + windowHeight < elementPosition + windowHeight / 4) {
-      element.classList.add('fade-out');
-    } else {
-      element.classList.remove('fade-out');
-    }
-  });
-}
-
-window.addEventListener('scroll', handleScroll);
-window.addEventListener('load', handleScroll);
-
-</script>
 <script>
 function handleScroll() {
     const fadeElements = document.querySelectorAll('.fade-element');
