@@ -120,9 +120,21 @@
         }
 
         .sign-up {
-            background-color: white; /* White background */
-            color: black;
-            border: none;
+            background-color: white; /* Black background */
+            color: black; /* White text */
+            border: 2px solid white; /* Grey outline by default */
+            border-radius: 10px; /* Rounded corners */
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: border-color 0.2s ease; /* Smooth transition for hover effect */
+            transition: color 0.2s ease;
+        }
+
+        .sign-up:hover {
+            border-color: white; /* Outline turns white on hover */
+            background-color:black;
+            color: white;
         }
         /* Highlight current page */
         /* Highlight current page */
@@ -134,11 +146,11 @@
         }
 
         .listing-box {
-        width: 22%;
+        width: 17%;
         background-color: #111;
         border-radius: 15px;
         padding: 15px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         }
 
         .listing-image {
@@ -182,6 +194,20 @@
         opacity: 1;
         transform: translateY(0);
         }
+        .pro {
+            background-color: #000; /* Black background */
+            color: white; /* White text */
+            border: 2px solid grey; /* Grey outline by default */
+            border-radius: 10px; /* Rounded corners */
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .pro:hover {
+            border-color: white; /* Outline turns white on hover */
+        }
 
 
 
@@ -214,25 +240,25 @@
         <h1 class="fade-element property-header prop" style="text-align:center;">PROPERTY</h1>
       
         <div class="listings-container">
-          <div class="listing-box fade-element">
+          <div class=" pro listing-box fade-element">
             <img src="https://i.pinimg.com/736x/69/e4/71/69e471bfd97371ea7cf6747cf0d239d5.jpg" alt="Property 1" class="listing-image">
             <p class="listing-name">cn mel</p>
             <p class="listing-price">$1,500,000</p>
             <p class="listing-date">Listed on March 15, 2025</p>
           </div>
-          <div class="listing-box fade-element">
+          <div class=" pro listing-box fade-element">
             <img src="https://i.pinimg.com/736x/57/ff/56/57ff56028784f6525e89d4f1cc35f91f.jpg" alt="Property 2" class="listing-image">
             <p class="listing-name">cat</p>
             <p class="listing-price">$500,000</p>
             <p class="listing-date">Listed on March 16, 2025</p>
           </div>
-          <div class="listing-box fade-element">
+          <div class=" pro listing-box fade-element">
             <img src="https://i.pinimg.com/736x/8a/eb/4e/8aeb4e61d5c29c66979d6cbbf0ee50f9.jpg" alt="Property 3" class="listing-image">
             <p class="listing-name">car</p>
             <p class="listing-price">$750,000</p>
             <p class="listing-date">Listed on March 17, 2025</p>
           </div>
-          <div class="listing-box fade-element">
+          <div class=" pro listing-box fade-element">
             <img src="https://i.pinimg.com/736x/e5/ec/07/e5ec07a8480783d267541ddb254b2846.jpg" alt="Property 4" class="listing-image">
             <p class="listing-name">zip zip zap zap</p>
             <p class="listing-price">$950,000</p>
@@ -241,25 +267,25 @@
         </div>
         <br>
         <div class="listings-container">
-            <div class="listing-box fade-element">
+            <div class=" pro listing-box fade-element">
               <img src="https://i.pinimg.com/736x/09/ab/f8/09abf8fbd1dc15825729d16db2dc4004.jpg" alt="Property 1" class="listing-image">
               <p class="listing-name">hehe</p>
               <p class="listing-price">$1,000</p>
               <p class="listing-date">Listed on March 15, 2025</p>
             </div>
-            <div class="listing-box fade-element">
+            <div class=" pro listing-box fade-element">
               <img src="https://i.pinimg.com/736x/3d/81/63/3d816308aadc538d2c65567bd590e750.jpg" alt="Property 2" class="listing-image">
               <p class="listing-name">meo</p>
               <p class="listing-price">$3,000</p>
               <p class="listing-date">Listed on March 16, 2025</p>
             </div>
-            <div class="listing-box fade-element">
+            <div class=" pro listing-box fade-element">
               <img src="https://dictionary.cambridge.org/vi/images/thumb/chick_noun_002_06563.jpg?version=6.0.46" alt="Property 3" class="listing-image">
               <p class="listing-name">chip</p>
               <p class="listing-price">$665,000</p>
               <p class="listing-date">Listed on March 17, 2025</p>
             </div>
-            <div class="listing-box fade-element">
+            <div class=" pro listing-box fade-element">
               <img src="https://i.pinimg.com/736x/7a/a9/59/7aa95991d02c27cd03ab1b59cd3f88f3.jpg" alt="Property 4" class="listing-image">
               <p class="listing-name">shhhh</p>
               <p class="listing-price">$10,000</p>

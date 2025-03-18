@@ -97,9 +97,21 @@
         }
 
         .sign-up {
-            background-color: white; /* White background */
-            color: black;
-            border: none;
+            background-color: white; /* Black background */
+            color: black; /* White text */
+            border: 2px solid white; /* Grey outline by default */
+            border-radius: 10px; /* Rounded corners */
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: border-color 0.2s ease; /* Smooth transition for hover effect */
+            transition: color 0.2s ease;
+        }
+
+        .sign-up:hover {
+            border-color: white; /* Outline turns white on hover */
+            background-color:black;
+            color: white;
         }
         /* Highlight current page */
         /* Highlight current page */
